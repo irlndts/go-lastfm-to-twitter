@@ -34,7 +34,7 @@ func newUserTopArtistsCommand() *cobra.Command {
 		},
 	}
 	c.PersistentFlags().StringVar(&opts.user, "user", "", "The user name to fetch top artists for.")
-	c.PersistentFlags().StringVar(&opts.period, "period", "7day", "The time period over which to retrieve top artists for.")
+	c.PersistentFlags().StringVar(&opts.period, "period", "week", "The time period over which to retrieve top artists for (overall|week|month|quartal|halfyear|year).")
 	c.PersistentFlags().IntVar(&opts.limit, "limit", 10, "The number of results to fetch per page.")
 	c.PersistentFlags().IntVar(&opts.offset, "offset", 0, "The page number to fetch.")
 	c.PersistentFlags().BoolVar(&opts.publish, "publish", false, "Publish the data to twitter")
@@ -46,12 +46,36 @@ const (
 	msgEnd   = "\nMade by github.com/irlndts/go-lastfm-to-twitter"
 )
 
+// PeriodType ...
+type PeriodType string
+
+// Periods
+const (
+	PeriodOverall  PeriodType = "overall"
+	PeriodWeek     PeriodType = "7day"
+	PeriodMonth    PeriodType = "1month"
+	PeriodQuartal  PeriodType = "3month"
+	PeriodHalfYear PeriodType = "6month"
+	PeriodYear     PeriodType = "12month"
+)
+
+func period(p string) PeriodType {
+	return map[string]PeriodType{
+		"overall":  PeriodOverall,
+		"week":     PeriodWeek,
+		"month":    PeriodMonth,
+		"quartal":  PeriodQuartal,
+		"halfyear": PeriodHalfYear,
+		"year":     PeriodYear,
+	}[p]
+}
+
 func userTopArtists(cmd *cobra.Command, args []string, opts *userTopArtistsOptions) error {
 	lastfm, err := lastfm.New(cfg.LastFM.Key)
 	if err != nil {
 		return err
 	}
-	top, err := lastfm.User.TopArtists(opts.user, opts.period, opts.limit, opts.offset)
+	top, err := lastfm.User.TopArtists(opts.user, string(period(opts.period)), opts.limit, opts.offset)
 	if err != nil {
 		return err
 	}

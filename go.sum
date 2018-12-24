@@ -2,8 +2,8 @@ github.com/inconshreveable/mousetrap v1.0.0 h1:Z8tu5sraLXCXIcARxBp/8cbvlwVa7Z1NH
 github.com/inconshreveable/mousetrap v1.0.0/go.mod h1:PxqpIevigyE2G7u3NXJIT2ANytuPF1OarO4DADm73n8=
 github.com/irlndts/go-lastfm v0.0.2 h1:5KpOo2JSvk5sTGE4Dzu+n4sovhzIYphBVZ2SdLXYOXA=
 github.com/irlndts/go-lastfm v0.0.2/go.mod h1:SKYYW9n6AleIcm+WQb+fgW6ZUEO2bEffHeWovzdsHQs=
-github.com/irlndts/go-twitter v0.0.0-20180707174424-bf7d2b4e2175 h1:0AY5AusV0zTK5zWMWyFLvo8EuUhJQANeSMuSwt2aklA=
-github.com/irlndts/go-twitter v0.0.0-20180707174424-bf7d2b4e2175/go.mod h1:ZWqrKRzAMd2mtqau/HidtArxzMky10Bv762ZxPSPCSg=
+github.com/irlndts/go-twitter v0.0.1 h1:FNYTZLA/eRqhLD3iLZUIhuniyQKsQcLYaUeQbJSWfaE=
+github.com/irlndts/go-twitter v0.0.1/go.mod h1:ZWqrKRzAMd2mtqau/HidtArxzMky10Bv762ZxPSPCSg=
 github.com/spf13/cobra v0.0.3 h1:ZlrZ4XsMRm04Fr5pSFxBgfND2EBVa1nLpiy1stUsX/8=
 github.com/spf13/cobra v0.0.3/go.mod h1:1l0Ry5zgKvJasoi3XT1TypsSe7PqH0Sj9dhYf7v3XqQ=
 github.com/spf13/pflag v1.0.3 h1:zPAT6CGy6wXeQ7NtTnaTerfKOsV6V6F8agHXFiazDkg=
