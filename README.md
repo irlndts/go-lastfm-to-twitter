@@ -13,7 +13,7 @@ go install -u github.com/irlndts/go-lastfm-to-twitter
 ### Usage
 ```
 go-lastfm-to-twitter list \
-  --user=kleto4kin \
+  --user=<USERNAME> \
   --period=week \
   --publish=true \
   --lastfm-key=<KEY> \
