@@ -42,7 +42,7 @@ func newUserTopArtistsCommand() *cobra.Command {
 }
 
 const (
-	msgStart = "This week Last.fm top:\n"
+	msgStart = "Last.fm %s top:\n"
 	msgEnd   = "\nMade by github.com/irlndts/go-lastfm-to-twitter"
 )
 
@@ -99,7 +99,7 @@ func userTopArtists(cmd *cobra.Command, args []string, opts *userTopArtistsOptio
 		}
 		twitter.Token(cfg.Twitter.Token, cfg.Twitter.TokenSecret)
 
-		msg := msgStart
+		msg := fmt.Sprintf(msgStart, opts.period)
 		for _, a := range top.Artists {
 			line := fmt.Sprintf("(%d) %s\n", a.Playcount, a.Name)
 			if len(line)+len(msg)+len(msgEnd) > 280 {
