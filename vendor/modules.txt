@@ -1,10 +1,15 @@
 # github.com/inconshreveable/mousetrap v1.0.0
+## explicit
 github.com/inconshreveable/mousetrap
-# github.com/irlndts/go-lastfm v0.0.3
+# github.com/irlndts/go-lastfm v0.0.4
+## explicit
 github.com/irlndts/go-lastfm
 # github.com/irlndts/go-twitter v0.0.1
+## explicit
 github.com/irlndts/go-twitter
 # github.com/spf13/cobra v0.0.3
+## explicit
 github.com/spf13/cobra
 # github.com/spf13/pflag v1.0.3
+## explicit
 github.com/spf13/pflag
