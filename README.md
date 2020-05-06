@@ -4,6 +4,7 @@ simple cli tool to publish your lastfm top to twitter
 
 ![last.fm top](http://s3-eu-central-1.amazonaws.com/irlndts.moscow/wp-content/uploads/2018/12/19171411/2018-12-19_17-13-30-e1545228962769.png)
 
+
 ### Installation
 
 ```
