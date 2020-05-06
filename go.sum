@@ -1,7 +1,7 @@
 github.com/inconshreveable/mousetrap v1.0.0 h1:Z8tu5sraLXCXIcARxBp/8cbvlwVa7Z1NHg9XEKhtSvM=
 github.com/inconshreveable/mousetrap v1.0.0/go.mod h1:PxqpIevigyE2G7u3NXJIT2ANytuPF1OarO4DADm73n8=
-github.com/irlndts/go-lastfm v0.0.4 h1:HmhgtZXHwhDPO/+tJPWiNZo0wQwTa3KSludzvdmOYEQ=
-github.com/irlndts/go-lastfm v0.0.4/go.mod h1:TTp9PC2yRIKG+pgSyH+L+ujAIyT1xdj2DGcZjyj4wMw=
+github.com/irlndts/go-lastfm v0.0.5 h1:01KtobBizwoFTlDTvzXWPsjnB/JpcuVbQzhfGWilr2s=
+github.com/irlndts/go-lastfm v0.0.5/go.mod h1:TTp9PC2yRIKG+pgSyH+L+ujAIyT1xdj2DGcZjyj4wMw=
 github.com/irlndts/go-twitter v0.0.1 h1:FNYTZLA/eRqhLD3iLZUIhuniyQKsQcLYaUeQbJSWfaE=
 github.com/irlndts/go-twitter v0.0.1/go.mod h1:ZWqrKRzAMd2mtqau/HidtArxzMky10Bv762ZxPSPCSg=
 github.com/spf13/cobra v0.0.3 h1:ZlrZ4XsMRm04Fr5pSFxBgfND2EBVa1nLpiy1stUsX/8=

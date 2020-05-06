@@ -5,6 +5,19 @@ import (
 	"strconv"
 )
 
+// PeriodType are supported periods by last.fm
+type PeriodType string
+
+// Periods
+const (
+	PeriodOverall  PeriodType = "overall"
+	PeriodWeek     PeriodType = "7day"
+	PeriodMonth    PeriodType = "1month"
+	PeriodQuartal  PeriodType = "3month"
+	PeriodHalfYear PeriodType = "6month"
+	PeriodYear     PeriodType = "12month"
+)
+
 const (
 	getTopArtistsMethod = "user.getTopArtists"
 )
@@ -84,13 +97,13 @@ func (r *TopArtistsResponse) topartists() (*TopArtists, error) {
 }
 
 // TopArtists returns a list of top artists
-func (s *UserService) TopArtists(user, period string, limit, offset int) (*TopArtists, error) {
+func (s *UserService) TopArtists(user string, period PeriodType, limit, offset int) (*TopArtists, error) {
 	params := url.Values{}
 	params.Set("api_key", s.apiKey)
 	params.Set("method", getTopArtistsMethod)
 
 	params.Set("user", user)
-	params.Set("period", period)
+	params.Set("period", string(period))
 	params.Set("limit", strconv.Itoa(limit))
 	params.Set("offset", strconv.Itoa(offset))
 	params.Set("format", "json")

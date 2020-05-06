@@ -46,27 +46,14 @@ const (
 	msgEnd   = "\nMade by github.com/irlndts/go-lastfm-to-twitter"
 )
 
-// PeriodType ...
-type PeriodType string
-
-// Periods
-const (
-	PeriodOverall  PeriodType = "overall"
-	PeriodWeek     PeriodType = "7day"
-	PeriodMonth    PeriodType = "1month"
-	PeriodQuartal  PeriodType = "3month"
-	PeriodHalfYear PeriodType = "6month"
-	PeriodYear     PeriodType = "12month"
-)
-
-func period(p string) PeriodType {
-	return map[string]PeriodType{
-		"overall":  PeriodOverall,
-		"week":     PeriodWeek,
-		"month":    PeriodMonth,
-		"quartal":  PeriodQuartal,
-		"halfyear": PeriodHalfYear,
-		"year":     PeriodYear,
+func period(p string) lastfm.PeriodType {
+	return map[string]lastfm.PeriodType{
+		"overall":  lastfm.PeriodOverall,
+		"week":     lastfm.PeriodWeek,
+		"month":    lastfm.PeriodMonth,
+		"quartal":  lastfm.PeriodQuartal,
+		"halfyear": lastfm.PeriodHalfYear,
+		"year":     lastfm.PeriodYear,
 	}[p]
 }
 
@@ -75,7 +62,7 @@ func userTopArtists(cmd *cobra.Command, args []string, opts *userTopArtistsOptio
 	if err != nil {
 		return err
 	}
-	top, err := lastfm.User.TopArtists(opts.user, string(period(opts.period)), opts.limit, opts.offset)
+	top, err := lastfm.User.TopArtists(opts.user, period(opts.period), opts.limit, opts.offset)
 	if err != nil {
 		return err
 	}
