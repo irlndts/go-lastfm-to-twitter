@@ -48,5 +48,6 @@ func init() {
 
 	rootCmd.AddCommand(
 		newUserTopArtistsCommand(),
+		newUserTopArtistsServerCommand(),
 	)
 }
